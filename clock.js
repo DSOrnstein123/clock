@@ -25,4 +25,10 @@ function showTime() {
   document.getElementById(
     "MyClockDisplay"
   ).innerHTML = `${hour}:${minute}:${second} ${session}`;
+
+  setTimeout(() => {
+    showTime();
+  }, 1000);
 }
+
+showTime();
